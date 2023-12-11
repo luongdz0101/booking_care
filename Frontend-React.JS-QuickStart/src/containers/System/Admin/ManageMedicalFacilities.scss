@@ -1,0 +1,22 @@
+.medical-facilities__container {
+    .m-s-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container {
+        label {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.preview-imgg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,33 @@
+.container {
+    .mt {
+
+
+        margin-top: 320px;
+        border-radius: 8px;
+        background-color: rgb(255, 236, 178);
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+
+        .detail-clinic__img {
+            height: 90px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+
+        }
+
+        .detail-clinic__text-up {
+            font-size: 1.6rem;
+            color: rgb(40, 49, 63);
+            font-weight: 700;
+        }
+
+        .detail-clinic__dow {
+            font-size: 1.2rem;
+            color: rgb(40, 49, 63);
+            font-weight: 400;
+        }
+
+        .detail-clinic__body-text {}
+    }
+}

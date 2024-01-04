@@ -8,7 +8,6 @@ import * as actions from '../../../store/actions'
 import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router';
 import { languages } from '../../../utils';
-import { getAllSpecialty } from '../../../services/userServices';
 
 
 
@@ -29,11 +28,6 @@ class OutstandingDoctor extends Component {
 
     async componentDidMount(){
         this.props.loadTopDoctors();
-
-        
-        
-      
-      
     }
 
 
@@ -57,7 +51,7 @@ class OutstandingDoctor extends Component {
     }
 
     render() {
-        let dataSpecialty = this.state.dataSpecialty;
+       
 
         
         let arrDoctor = this.state.arrDoctors;

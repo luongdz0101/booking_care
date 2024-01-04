@@ -32,9 +32,6 @@ class MedicalFacility extends Component {
     }
 
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-        
-    }
 
 
     handleViewDetailClinic = (clinic) => {

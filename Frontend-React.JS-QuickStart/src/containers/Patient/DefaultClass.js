@@ -18,9 +18,7 @@ class DefaultClass extends Component {
      
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-      
-    }
+   
   
 
 

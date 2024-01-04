@@ -35,9 +35,7 @@ class HeaderClinic extends Component {
      
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-      
-    }
+
   
     handleViewDetailClinic = (clinic) => {
        

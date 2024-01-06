@@ -79,8 +79,8 @@ let  search = async(searchTerm) => {
                 let data = await db.User.findAll({
                     where: {
                       [Op.or]: [
-                          { firstName: { [Op.like]: '%' + searchTerm + '%'} },
-                          // { age: { [Op.like]: '%' + searchTerm + '%'} }, 
+                          { firstName : { [Op.like]:  searchTerm + '%'} },
+                          { lastName: { [Op.like]: '%' + searchTerm } }, 
                           // { country: { [Op.like]: '%' + searchTerm + '%'} }, 
                           // { position: { [Op.like]: '%' + searchTerm + '%'} },
                           // { wage: { [Op.like]: '%' + searchTerm + '%'} }  
@@ -91,6 +91,7 @@ let  search = async(searchTerm) => {
                         exclude: ['image']
                     }
                   })
+
 
                   resolve({
                     errMessage: 'ok',

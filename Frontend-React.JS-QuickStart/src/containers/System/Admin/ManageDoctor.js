@@ -25,7 +25,7 @@ class ManageDoctor extends Component {
             description: '',
             arrDoctor: [],
             hasOldData: false,
-
+            fullNameDoctor: '',
 
 
             listPrice: [],
@@ -304,8 +304,9 @@ class ManageDoctor extends Component {
 
     render() {
         
-        let {hasOldData, listSpecialty} = this.state
+        let {hasOldData, listSpecialty, selectedPayment} = this.state
 
+  
       
        
         return (

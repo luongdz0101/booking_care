@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { FormattedDate } from 'react-intl';
+
 import './ManageSpecialty.scss';
 import {  CommonUtils } from '../../../utils';
 import MarkdownIt from 'markdown-it';
@@ -76,9 +76,6 @@ class ManageSpecialty extends Component {
         
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-      
-    }
  
     buildDataInputSelect = (inputData) => {
         let result = [];

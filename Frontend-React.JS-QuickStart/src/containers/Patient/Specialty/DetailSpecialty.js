@@ -41,8 +41,6 @@ class DetailSpecialty extends Component {
         
              let resProvince = await getAllCodeService("PROVINCE");
             
-
-  
              if(res && res.errCode === 0 && resProvince && resProvince.errCode === 0){
                 let data = res.data;
                 let arrDoctorId = []
@@ -137,7 +135,7 @@ class DetailSpecialty extends Component {
         let {detailSpecialty} = this.state
         let { listProvince} = this.state
    
-     console.log(this.state)
+
         
         return (
             

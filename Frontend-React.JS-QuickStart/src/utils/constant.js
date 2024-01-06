@@ -10,6 +10,7 @@ export const path = {
 
     HEADER_CLINIC: '/header-clinic',
     HEADER_SPECIALTY: '/header-specialty',
+    ASK_ANSWER: '/doctor_ask-answer',
     HEADER_DOCTOR: '/header-doctor',
 
 

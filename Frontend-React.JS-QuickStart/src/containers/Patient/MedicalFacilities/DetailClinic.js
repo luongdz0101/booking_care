@@ -24,7 +24,7 @@ class DetailClinic extends Component {
 
     async componentDidMount(){
         if(this.props.match && this.props.match.params && this.props.match.params.id){
-            let id =this.props.match.params.id;
+            let id = this.props.match.params.id;
             
             let res = await getMedicalFacilitiesById({
                 id : id
@@ -101,8 +101,8 @@ class DetailClinic extends Component {
                                     <div className="row doctor">
                                         <div className="col-6 mt-5">
                                             <ProfileDoctor 
-                                            doctorId = {item}
-                                            isShowDescription = {true} />
+                                                doctorId = {item}
+                                                isShowDescription = {true} />
                                             </div>
                                             
 

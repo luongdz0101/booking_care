@@ -20,8 +20,8 @@ class AddSpecialty extends Component {
     constructor(props){
         super(props);
         this.state = {
-           name: '',
-           imageBase64: '',
+            name: '',
+            imageBase64: '',
             descriptionHtml: '',
             descriptionMarkdown: '',
             previewImgURL: ''
@@ -125,50 +125,50 @@ class AddSpecialty extends Component {
                 <div className="add-specialty__title">Tạo thêm thông tin Chuyên Khoa</div>
                 
                 <div className="container">
-                <div className="add-new-specialty row">
-                    <div className="col-6 form-group">
-                            <label htmlFor="">Tên chuyên khoa</label>
-                            <input type="text" className='form-control' 
-                            
-                                value={(this.state.name)}
-                                onChange={(event) => this.handleOnchangeName(event, 'name')}
-                            />
-                    </div>
-
-                    <div className="col-6  form-group">
-                            <label htmlFor="">Ảnh chuyên khoa</label>
-                            <div className='label-upload'>
-
-                                <input id="preview-img" type="file" className='file-control' hidden
-                                    onChange={(event) => this.handleOnChangeImg(event)}
-
+                    <div className="add-new-specialty row">
+                        <div className="col-6 form-group">
+                                <label htmlFor="">Tên chuyên khoa</label>
+                                <input type="text" className='form-control' 
+                                
+                                    value={(this.state.name)}
+                                    onChange={(event) => this.handleOnchangeName(event, 'name')}
                                 />
-                                <label htmlFor="preview-img" className='preview-img'>Tải ảnh <i className="fas fa-upload"></i> </label>
+                        </div>
 
-                                <div className="preview-imagee"
-                                    style={{backgroundImage: `url(${this.state.previewImgURL})`}}
-                                    onClick={() => this.openImg()}
-                                > 
+                        <div className="col-6  form-group">
+                                <label htmlFor="">Ảnh chuyên khoa</label>
+                                <div className='label-upload'>
 
+                                    <input id="preview-img" type="file" className='file-control' hidden
+                                        onChange={(event) => this.handleOnChangeImg(event)}
+
+                                    />
+                                    <label htmlFor="preview-img" className='preview-img'>Tải ảnh <i className="fas fa-upload"></i> </label>
+
+                                    <div className="preview-imagee"
+                                        style={{backgroundImage: `url(${this.state.previewImgURL})`}}
+                                        onClick={() => this.openImg()}
+                                    > 
+
+                                    </div>
                                 </div>
-                            </div>
+                        </div>
+                    <div className="col-12">
+                        <MdEditor style={{ height: '500px' }} 
+                                renderHTML={text => mdParser.render(text)} 
+                                onChange={this.handleEditorChange} 
+                                value={this.state.descriptionMarkdown}
+                            /> 
                     </div>
-                   <div className="col-12">
-                    <MdEditor style={{ height: '500px' }} 
-                            renderHTML={text => mdParser.render(text)} 
-                            onChange={this.handleEditorChange} 
-                            value={this.state.descriptionMarkdown}
-                        /> 
-                   </div>
 
-                   <div className="col-12">
-                        <button className='save-content-specialty btn btn-warning'
-                        
-                        onClick={() => this.handleClickSave()}
-                        
-                        >Lưu thông tin chuyên khoa</button>
-                   </div>
-                </div>
+                    <div className="col-12">
+                            <button className='save-content-specialty btn btn-warning'
+                            
+                            onClick={() => this.handleClickSave()}
+                            
+                            >Lưu thông tin chuyên khoa</button>
+                    </div>
+                    </div>
                 </div>
                         
                

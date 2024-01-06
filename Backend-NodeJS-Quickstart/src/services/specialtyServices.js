@@ -80,7 +80,6 @@ let  getDetailSpecialtyById= (inputId, location) => {
             }else{
                 
            
-                
 
                     let data = await db.specialty.findOne({
                         where: {

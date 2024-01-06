@@ -36,12 +36,12 @@
             "specialty": "Chuyên khoa",
             "add-specialty": "Thêm mới chuyên khoa",
             "manage-specialty": "Quản lý chuyên khoa",
-            "handbook": "Cẩm nang",
-            "manage-handbook": "Quản lý cẩm nang"
+            "asked-answered": "Hỏi đáp",
+            "manage-asked-answered": "Quản lý hỏi đáp"
         },
         "doctor": {
             "manage-schedule": "Quản lý kh khám bệnh",
-            "manage-patient": "Quản  khám bệnh"
+            "manage-patient": "Quản khám bệnh"
         }
     },
     "manage-user": {

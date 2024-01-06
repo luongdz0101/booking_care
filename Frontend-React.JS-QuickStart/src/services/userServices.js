@@ -121,12 +121,22 @@ const deleteMedicalFacilities = (data) => {
     return axios.delete(`/api/delete-medical-facilities?id=${data.id}`);
 }
 
+const createNewQuestion = (data) => {
+    return axios.post('/api/create-new-question', data);
+}
+
+const getQuestion = (data) => {
+    return axios.get(`/api/get-question`);
+}
+
+
 
 
 
 
 export {
     handleLoginApi,
+    getQuestion,
     getAllUsers,
     createNewUser,
     deleteUser,
@@ -153,5 +163,6 @@ export {
     saveInfoMedicalFacilities,
     saveInfoSpecialty,
     handleDeleteSpecialty,
-    deleteMedicalFacilities
+    deleteMedicalFacilities,
+    createNewQuestion
 };

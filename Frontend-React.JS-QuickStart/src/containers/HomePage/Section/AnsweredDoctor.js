@@ -5,18 +5,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./AnsweredDoctor.scss";
 import { FormattedMessage } from 'react-intl';
-
+import { withRouter } from 'react-router';
 class AnsweredDoctor extends Component {
+
+
+
+
+    handleDetailerAsKAnswer = () => {
+        
+        this.props.history.push(`/doctor_ask-answer`)
+    }
 
     render() {
         
     
         return (
             < React.Fragment>
-                <div className="section-specialty">
+                <div className="section-specialty" onClick={() => this.handleDetailerAsKAnswer()}>
                     <div className="specialty-content ">
                     <div className="grid wide ">
-                        <div className="row center">
+                        <div className="row">
                             
                             <div className="col-8 header__title--body">
                                     <div className="specialty-header__title">Bác sĩ hỏi đáp</div>
@@ -35,17 +43,6 @@ class AnsweredDoctor extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-4 mt-4">
-                                <div className="specialty-content__body">
-                                    <div className='specialty-content'> 
-                                        <div className="specialty-content__img img_answered"></div>
-                                        
-                                        <span className='specialty-content__text answered-text'>Cảm nang hỏi đáp</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-4"></div>
                         
                         </div>
                     </div>
@@ -69,4 +66,5 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AnsweredDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AnsweredDoctor));
+

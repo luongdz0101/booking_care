@@ -9,6 +9,7 @@ import Header from '../containers/Header/Header';
 import ManageMedicalFacilities from '../containers/System/Admin/ManageMedicalFacilities';
 import ManageClinic from '../containers/System/Clinic/ManageClinic';
 import AddSpecialty from '../containers/System/Specialty/AddSpecialty';
+import ManageQA from '../containers/System/AskAnswered/ManageQA';
 
 class System extends Component {
     render() {
@@ -28,6 +29,8 @@ class System extends Component {
                             <Route path="/system/manage-specialty" component={ManageSpecialty} />
                             <Route path="/system/manage-medical-facilities" component={ManageMedicalFacilities} />
                             <Route path="/system/manage-update-clinic" component={ManageClinic} />
+
+                            <Route path="/system/manage-asked-answered" component={ManageQA} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

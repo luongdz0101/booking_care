@@ -60,15 +60,18 @@ export const adminMenu = [
     },
       // quan ly cam nang
       { 
-        name: 'menu.admin.handbook',
+        name: 'menu.admin.asked-answered',
         menus: [
             {
-                name: 'menu.admin.manage-handbook',link: '/system/manage-handbook'
+                name: 'menu.admin.manage-asked-answered',link: '/system/manage-asked-answered'
             },
             
         ]
     },
 ];
+
+
+
 
 export const doctorMenu = [
     {

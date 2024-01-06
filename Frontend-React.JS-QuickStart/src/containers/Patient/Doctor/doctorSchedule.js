@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import './doctorSchedule.scss';
 import '../../gird/gird.scss';
 import moment from 'moment';
-import localization from 'moment/locale/vi'
+
 import { languages } from '../../../utils';
 import { getScheduleDoctor } from '../../../services/userServices';
 import BookingModal from './modal/BookingModal';
@@ -16,7 +16,7 @@ class doctorSchedule extends Component {
     constructor(props){
         super(props);
         this.state = {
-           allDay : [],
+            allDay : [],
             allTimes: [],
             isOpenModalBooking: false,
             dataScheduleTimeModal: {}

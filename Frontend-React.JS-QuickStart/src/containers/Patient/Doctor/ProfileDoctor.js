@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { FormattedDate } from 'react-intl';
+
 import './ProfileDoctor.scss'
 import { languages } from '../../../utils';
-import localization from 'moment/locale/vi'
 import {getProfileDoctor} from '../../../services/userServices'
 import _ from 'lodash';
 import moment from 'moment';
@@ -42,9 +41,7 @@ class ProfileDoctor extends Component {
         return result;
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-       
-    }
+
   
 
     renderTimeBooking = (dataTime) => {
@@ -140,11 +137,7 @@ class ProfileDoctor extends Component {
                                     </>
                                         
 
-                                
-                                      
-                                    
-                                            
-                                        
+
                                                 
                                 </div>
 

@@ -3,16 +3,6 @@ import { connect } from "react-redux";
 import { CommonUtils } from '../../../../utils';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-
-
-
-
-
-
-
-
-
-
 class RemedyModal extends Component {
    
         

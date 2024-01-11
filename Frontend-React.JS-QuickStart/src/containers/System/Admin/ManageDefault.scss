@@ -1,21 +1,3 @@
-.manage-specialty__container {
-    .manage-specialty__title {
-        text-align: center;
-        margin: 1rem 0;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.2rem;
-    }
-
-    .add-new-specialty {
-        .save-content-specialty {
-            margin: 1rem 0;
-        }
-    }
-
-}
-
 .label-upload {
     .preview-img {
         cursor: pointer;
@@ -33,5 +15,21 @@
         background: center center no-repeat;
         background-size: contain;
         cursor: pointer;
+    }
+}
+
+.medical__container {
+    .m-s-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container {
+        label {
+            margin-bottom: 0;
+        }
     }
 }

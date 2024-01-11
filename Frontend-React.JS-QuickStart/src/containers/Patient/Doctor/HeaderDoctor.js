@@ -59,7 +59,7 @@ class HeaderDoctor extends Component {
 
             <React.Fragment>
                 <HomeHeader />
-               <div className="clinic-link-container mt">
+               <div className="clinic-link-container mt mr-t">
                     <div className="container">
 
           

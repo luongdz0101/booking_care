@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
-import './ManageSpecialty.scss';
+
 import {  CommonUtils } from '../../../utils';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
@@ -24,7 +24,6 @@ class ManageSpecialty extends Component {
     constructor(props){
         super(props);
         this.state = {
-           
             arrClinic: [],
             descriptionHtml: '',
             descriptionMarkdown: '',
@@ -49,9 +48,7 @@ class ManageSpecialty extends Component {
 
     getAllSpecialty = async () => {
         let res = await getAllSpecialty ();
-
         let data = res.data;
-
         let arrClinic = this.buildDataInputSelect(data);
         if(res && res.errCode === 0){
             this.setState({
@@ -96,7 +93,7 @@ class ManageSpecialty extends Component {
   
     handleChange = async(selectedOption) => {
        
-        let {hasOldData} = this.state;
+       
         this.setState({ selectedOption });
          let res = await getDetailSpecialtyById({
             id: selectedOption.value
@@ -117,9 +114,7 @@ class ManageSpecialty extends Component {
             if(res.data) {
                 descriptionHtml = res.data.descriptionHtml;
                 descriptionMarkdown = res.data.descriptionMarkdown;
-       
                 name = res.data.name;
-              
                 imageBase64 = res.data.image;
             }
 
@@ -230,7 +225,7 @@ class ManageSpecialty extends Component {
         return (
 
             <React.Fragment>
-                <div className="medical-facilities__container">
+                <div className="medical__container">
                     <div className="m-s-title">
                             Quản lý chuyên khoa
                     </div>

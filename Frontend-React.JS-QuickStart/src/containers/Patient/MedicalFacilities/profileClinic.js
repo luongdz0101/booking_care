@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { FormattedDate } from 'react-intl';
 import './profileClinic.scss'
 
 

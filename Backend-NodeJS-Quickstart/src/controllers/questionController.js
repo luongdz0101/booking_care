@@ -41,7 +41,7 @@ let getQuestion = async(req,res) => {
 let search = async(req,res) => {
   
     try {
-        let specialty = await questionServices.search(req.body.searchTerm);
+        let specialty = await questionServices.search(req.query.searchTerm);
         return res.status(200).json(specialty);
     } catch (error) {
     
@@ -53,51 +53,33 @@ let search = async(req,res) => {
 }
 
 
-// let getDetailSpecialtyById = async(req,res) => {
+let getQuestionById = async(req,res) => {
   
-//     try {
-//         let specialty = await patientService.getDetailSpecialtyById(req.query.id, req.query.location);
-//         return res.status(200).json(specialty);
-//     } catch (error) {
+    try {
+        let question = await questionServices.getQuestionById(req.query.id);
+        return res.status(200).json(question);
+    } catch (error) {
     
-//         return res.status(200).json({
-//             errCode: -1,
-//             message: "Error from server..."
-//         })
-//     }
-// }
+        return res.status(200).json({
+            errCode: -1,
+            message: "Error from server..."
+        })
+    }
+}
 
-// let saveInfoSpecialty = async (req, res) => {
-//     try {
-//         let response = await patientService.saveInfoSpecialty(req.body);
-//         return res.status(200).json(response);
-
-//     } catch (error) {
-//         console.log(error)
-//         return res.status(200).json({
-//             errCode: -1,
-//             message: "Error from server..."
-            
-//         })
-//     }
-// }
-
-
-// let handleDeleteSpecialty = async(req,res) => {
-//     try {
-//         let data = await patientService.handleDeleteSpecialty(req.query.id);
-       
-//         return res.status(200).json(data)
-        
-//     } catch (error) {
-//         console.log(error);
-//         return res.status(200).json({
-//             errCode: '1',
-//             errMessage: 'Error form server'
-//         })
-//     }
-// }
-
+let getDoctorInfo = async(req,res) => {
+  
+    try {
+        let doctorInfo = await questionServices.getDoctorInfo();
+        return res.status(200).json(doctorInfo);
+    } catch (error) {
+    
+        return res.status(200).json({
+            errCode: -1,
+            message: "Error from server..."
+        })
+    }
+}
 
 
 module.exports = {
@@ -106,5 +88,7 @@ module.exports = {
     
     createNewQuestion: createNewQuestion,
     getQuestion: getQuestion,
-    search: search
+    search: search,
+    getQuestionById: getQuestionById,
+    getDoctorInfo: getDoctorInfo
 }

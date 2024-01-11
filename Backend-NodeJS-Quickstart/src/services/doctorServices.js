@@ -23,7 +23,7 @@ let  getTopDoctorHome= (limitInput) => {
                     { model: db.Allcode, as: 'genderData', attributes: ['valueEn', 'valueVi']},{
                         model: db.Doctor_info, 
                         attributes: {
-                                exclude: ['id', 'doctorId']
+                             exclude: ['id', 'doctorId']
                         },
                         include: [
                             { model: db.specialty, as: 'specialtyData', attributes: ['name']},
@@ -31,10 +31,20 @@ let  getTopDoctorHome= (limitInput) => {
                     }
                    
                 ],
+
+                
+               
+
+
                 raw: true,
                 nest: true
                
             })
+
+        
+         
+          
+
             resolve({
                 errCode: 0,
                 data: users
@@ -500,6 +510,8 @@ let  getExtraInfoById= (inputId) => {
                         { model: db.Allcode, as: 'typePriceData', attributes: ['valueEn', 'valueVi']},
                         { model: db.Allcode, as: 'typeProvinceData', attributes: ['valueEn', 'valueVi']},
                         { model: db.Allcode, as: 'typePaymentData', attributes: ['valueEn', 'valueVi']},
+                
+                     
                     ],
                     raw: false,
                     nest:true

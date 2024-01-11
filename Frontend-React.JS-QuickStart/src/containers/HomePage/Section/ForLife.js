@@ -30,7 +30,7 @@ class  ForLife extends Component {
                         <div className="row center">
                             
                             <div className="col-8 header__title--body">
-                                    <div className="specialty-header__title"><FormattedMessage id ="home-page.outstanding-doctor"/></div>
+                                    <div className="specialty-header__title">Sống khoẻ suốt đời</div>
                             </div>
                             <div className="col-4 header__button--body">
                                 <button type="button" className="btn btn-info specialty-header__button"><FormattedMessage id ="home-page.see-more"/></button>

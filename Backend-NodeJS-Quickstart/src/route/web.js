@@ -28,6 +28,7 @@ let initWebRoutes = (app) => {
     router.put('/api/edit-users', userController.handleEditUser);
     router.delete('/api/delete-users', userController.handleDeleteUser);
     router.get('/api/all-code', userController.getAllCode);
+
     router.get('/api/top-doctor-home',doctorController.getTopDoctorHome);
 
     router.get('/api/get-all-doctor', doctorController.getAllDoctor);
@@ -65,7 +66,11 @@ let initWebRoutes = (app) => {
     router.post('/api/create-new-question', questionController.createNewQuestion);
     router.get('/api/get-question', questionController.getQuestion);
 
-    router.post('/api/search-sadas', questionController.search);
+    router.post('/api/search', questionController.search);
+    router.get('/api/get-question-by-id', questionController.getQuestionById);
+
+
+    router.get('/api/doctor-info', questionController.getDoctorInfo);
 
 
     return app.use("/", router);

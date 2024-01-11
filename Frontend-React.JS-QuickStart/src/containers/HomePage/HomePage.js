@@ -25,7 +25,7 @@ class HomePage extends Component {
         //     // slidesToShow: 3,
         //     // slidesToScroll: 3,
          
-        //   };
+        //   };                               
 
           var settings = {
             dots: false,
@@ -38,8 +38,8 @@ class HomePage extends Component {
               {
                 breakpoint: 1024,
                 settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
                   infinite: true,
                   dots: false
                 }
@@ -55,8 +55,8 @@ class HomePage extends Component {
               {
                 breakpoint: 480,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToShow: 2,
+                  slidesToScroll: 2
                 }
               }
             ]
@@ -76,10 +76,10 @@ class HomePage extends Component {
 
                 <AnsweredDoctor />
 
-                <ForYou/>
+                {/* <ForYou/> */}
 
-                <MentalHealth  
-                settings= {settings} />
+                {/* <MentalHealth  
+                settings= {settings} /> */}
               
                 <VideoDoctor />
 

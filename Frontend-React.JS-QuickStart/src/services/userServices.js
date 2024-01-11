@@ -129,12 +129,26 @@ const getQuestion = (data) => {
     return axios.get(`/api/get-question`);
 }
 
+const getQuestionById = (data) => {
+    return axios.get(`/api/get-question-by-id?id=${data.id}`)
+}
+
+const search = (data) => {
+    return axios.post(`/api/search?searchTerm=${data.search}`)
+}
+
+
+
+
+
 
 
 
 
 
 export {
+    search,
+    getQuestionById,
     handleLoginApi,
     getQuestion,
     getAllUsers,

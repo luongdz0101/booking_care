@@ -243,7 +243,7 @@ class ManageClinic extends Component {
         return (
 
             <React.Fragment>
-                <div className="medical-facilities__container">
+                <div className="medical__container">
                     <div className="m-s-title">
                             Quản lý cơ sở y tế
                     </div>

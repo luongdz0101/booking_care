@@ -42,7 +42,7 @@ class HomeHeader extends Component {
             <div className="home-header-container">
                 <div className="grid wide">
                     <div className="row center">
-                        <div className="col-3">
+                        <div className="col l-3 c-8 ">
                             <div className="left-content">
                                
                                 <div className="header-logo" 
@@ -50,7 +50,7 @@ class HomeHeader extends Component {
                                 ></div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col l-7 m-0 c-0">
                             <div className="center-container">
                                 <div className='center-content'>
                                     <span 
@@ -79,13 +79,13 @@ class HomeHeader extends Component {
                                          
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col l-2 c-4 ">
                           
                                 <div className="right-content">
-                                    <div className="right-content-support">
+                                    <div className="right-content-support ">
                                         <a href="https://bookingcare.vn/hotro">
                                             <i className="fas fa-question-circle right-content-icon"></i>
-                                            <span className='support-text' > <FormattedMessage id ="header-banner.support"/></span>      
+                                            <span className='support-text c-0' > <FormattedMessage id ="header-banner.support"/></span>      
                                         </a>
                                                         
                                     </div>
@@ -147,42 +147,32 @@ class HomeHeader extends Component {
                     <div className="header-banner__dow">
                         <div className="grid wide">
                             <div className="row">
-                                <div className="col-2">
+                                <div className="col l-3 c-0">
                                     <div className="dow__footer-menu">
                                         <div className="footer-menu__img footer-img" ></div>
                                         <span className='footer-menu__title'> <FormattedMessage id ="header-banner.specialized"/></span>
                                     </div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col l-3 c-0">
                                     <div className="dow__footer-menu">
                                         <div className="footer-menu__img_1 footer-img" ></div>
                                         <span className='footer-menu__title'><FormattedMessage id ="header-banner.remote-examination"/></span>
                                     </div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col l-3 c-0">
                                     <div className="dow__footer-menu">
                                         <div className="footer-menu__img_2 footer-img" ></div>
                                         <span className='footer-menu__title'><FormattedMessage id ="header-banner.general-examination"/></span>
                                     </div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col l-3 c-0">
                                     <div className="dow__footer-menu">
                                         <div className="footer-menu__img_3 footer-img" ></div>
                                         <span className='footer-menu__title'><FormattedMessage id ="header-banner.medical-tests"/></span>
                                     </div>
                                 </div>
-                                <div className="col-2">
-                                    <div className="dow__footer-menu">
-                                        <div className="footer-menu__img_4 footer-img" ></div>
-                                        <span className='footer-menu__title'><FormattedMessage id ="header-banner.mental-health"/></span>
-                                    </div>
-                                </div>
-                                <div className="col-2">
-                                    <div className="dow__footer-menu">
-                                        <div className="footer-menu__img_5 footer-img" ></div>
-                                        <span className='footer-menu__title'><FormattedMessage id ="header-banner.dental-examination"/></span>
-                                    </div>
-                                </div>
+                                
+                                
                                 
                             </div>
                         </div>

@@ -71,10 +71,10 @@ const DetailsDefault  = (props) => {
                                         onClick={() => modal === true ? handleOnClick(item) : handleViewDetail(item)}
                                     >
                                             
-                                                <div className="col-2">
+                                                <div className="col-2 ">
 
                                                 
-                                                    <div className="detail__img"
+                                                    <div className="detail__img "
 
                                         
 
@@ -91,7 +91,7 @@ const DetailsDefault  = (props) => {
                                                 
                                                 </div>
 
-                                                <div className="col-10">
+                                                <div className="col-10 ">
                                                         <div className="detail__body-text">
                                                     
                                                         <div className="detail__text-up">

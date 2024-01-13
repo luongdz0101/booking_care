@@ -15,11 +15,10 @@ class HomeFooter extends Component {
         return (
             < React.Fragment>
                 <div className="footer-container">
-                    <div className="grid ">
+                    <div className="grid wide">
                         <div className="footer-content">
                             <div className="row">
-                                <div className="col l-2"></div>
-                                <div className="col l-4">
+                                <div className="col l-6  c-12">
                                     <div className="footer-content__left">
                                         <div className="content__left-img"></div>
                                         <div className="content__left-header">
@@ -33,20 +32,8 @@ class HomeFooter extends Component {
                                         <div className="content__left-dk"></div>
                                     </div>
                                 </div>
-                                <div className="col l-2">
-                                    <div className="footer-content-center">
-                                        <ul className="footer-list">
-                                            <li className="footer-item">Liên hệ hợp tác</li>
-                                            <li className="footer-item">Danh bạ y tế</li>
-                                            <li className="footer-item">Sức khỏe doanh nghiệp</li>
-                                            <li className="footer-item">Gói chuyển đổi số doanh nghiệp</li>
-                                            <li className="footer-item">Câu hỏi thường gặp</li>
-                                            <li className="footer-item">Quy trình hỗ trợ giải quyết khiếu nại</li>
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                <div className="col l-2">
+                             
+                                <div className="col l-6  c-12">
                                     <div className="footer-content-right">
                                         <div className="content-right__header-body">
                                             Đối tác bảo trợ nội dung
@@ -67,33 +54,24 @@ class HomeFooter extends Component {
 
                                     </div>
                                </div>
-                               <div className="col l-2">
-                                    
-                               </div>
                             </div>  
                             
                         </div>
                     </div>
                 </div>
                 <div className="footer-end">
-                     <div className="grid ">
+                     <div className="grid wide">
                         <div className="footer-end-content">
                             <div className="row footer-center">
-                                <div className="col l-2"></div>
-                                <div className="col l-4">
+                                <div className="col l-6 c-12 m-6">
                                      <div className="text-footer-end">Copy booking care by @2023</div>
                                 </div>
-                                <div className="col l-2">
-                                    
-                                </div>
-                                <div className="col l-2">
+        
+                                <div className="col l-4 c-0 m-6">
                                     <div className="logo_footer">
                                         <div className="img-facebook"></div>
                                         <div className="img-youtube"></div>
                                     </div>
-                               </div>
-                               <div className="col l-2">
-                                    
                                </div>
                             </div>  
                             

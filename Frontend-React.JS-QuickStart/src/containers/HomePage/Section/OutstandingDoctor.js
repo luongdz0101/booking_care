@@ -82,7 +82,7 @@ class OutstandingDoctor extends Component {
                     </div>
                     
                 </div>
-                <div className="grid wide ">
+                <div className="grid wide">
                     <Slider {...this.props.settings}>
              
 
@@ -123,7 +123,7 @@ class OutstandingDoctor extends Component {
 
 
                    
-                </Slider>
+                    </Slider>
                 </div>
             </div>
             

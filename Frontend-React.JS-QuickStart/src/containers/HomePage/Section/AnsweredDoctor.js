@@ -26,14 +26,14 @@ class AnsweredDoctor extends Component {
                     <div className="grid wide ">
                         <div className="row">
                             
-                            <div className="col-8 header__title--body">
+                            <div className="col l-8 m-8 c-6 header__title--body">
                                     <div className="specialty-header__title">Bác sĩ hỏi đáp</div>
                             </div>
-                            <div className="col-4 header__button--body">
+                            <div className="col l-4 c-6 header__button--body">
                                 <button type="button" className="btn btn-info specialty-header__button"><FormattedMessage id ="home-page.see-more"/></button>
                             </div>
 
-                            <div className="col-4 mt-4">
+                            <div className="col l-4 m-4 c-12 mt-4">
                                 <div className="specialty-content__body">
                                     <div className='specialty-content'> 
                                         <div className="specialty-content__img img_answered"></div>

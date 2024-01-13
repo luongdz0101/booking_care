@@ -141,16 +141,16 @@ class DetailSpecialty extends Component {
             
             <React.Fragment>
                  <HomeHeader />
-                <div className="detail-specialty-container mt">
-                <div className="container">
+                <div className="detail-specialty-container mt mr-t">
+                <div className="grid wide bg-container">
                     <div className="row">
 
-                        <div className="col-12">
+                        <div className="col l-12 m-12 c-12">
                             {detailSpecialty && detailSpecialty.name &&
                                 <span className='detail-specialty-span'> Chuyên khoa: {detailSpecialty.name}</span>
                             }
                         </div>
-                        <div className="col-12">
+                        <div className="col l-12 m-12 c-12">
                             
                         {detailSpecialty && detailSpecialty.descriptionHtml
                             &&
@@ -163,9 +163,9 @@ class DetailSpecialty extends Component {
                     </div>
                 </div>
 
-                <div className="container select-body">
+                <div className="grid wide bg-container">
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col l-3 m-3 c-12 ">
                         <Select
                                 
                                 // value={this.state.selectedPrice}
@@ -178,20 +178,21 @@ class DetailSpecialty extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container">
-                                {arrDoctorId && arrDoctorId.length > 0 &&
+                <div className="grid wide bg-container">
+                    <div className="row">
+                        {arrDoctorId && arrDoctorId.length > 0 &&
                                 arrDoctorId.map((item, index) => {
                                     return(
-                                       
+
                                     <div className="row">
-                                        <div className="col-6 mt-5">
+                                        <div className="col l-6 m-6 c-12 mt-5">
                                             <ProfileDoctor 
                                             doctorId = {item}
                                             isShowDescription = {true} />
                                             </div>
                                             
 
-                                        <div className="col-6 body mt-5">
+                                        <div className="col l-6 m-6 c-12 body mt-5">
                                         <div className="">
                                         <DoctorSchedule
                                             doctorIdFromParent = {item}
@@ -211,15 +212,9 @@ class DetailSpecialty extends Component {
                             
                                 })
                                 }
+                    </div>
                                
-                           
-                          
-                          
-                            
-            
 
-
-              
                             
                         
                 </div>

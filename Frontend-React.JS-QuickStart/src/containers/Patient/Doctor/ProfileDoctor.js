@@ -83,16 +83,18 @@ class ProfileDoctor extends Component {
         return (
 
             <React.Fragment>
-               <div className="detail-dataProfile container">
-                    <div className="row">
-                        <div className="col-3">
-                            <div className="dataProfile-left"
+               <div className="detail-dataProfile ">
+                    
+                      <div className="dataProfile-left">
+                            <div className="dataProfile-img"
 
                             style={{backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ''})`}}>
 
                             </div>  
-                        </div>
-                        <div className="col-9 ">
+                      </div>
+                     
+                      
+                      
                             <div className="dataProfile-right">
                                 <div className="dataProfile-right-up">
                                             <span className='dataProfile-right-up__text'>
@@ -142,11 +144,7 @@ class ProfileDoctor extends Component {
                                 </div>
 
                             </div> 
-                        </div>
-                    </div>
-                     
-                  
-                               
+                                   
                    </div>
     
             </React.Fragment>

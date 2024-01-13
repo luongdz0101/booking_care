@@ -93,20 +93,21 @@ class DetailClinic extends Component {
                         </div>
                         
                     </div>
-                    <div className="container mt-5 ">
+                    <div className="grid wide bg-container mt-5 ">
+                        <div className="row">
                                 {arrDoctorId && arrDoctorId.length > 0 &&
                                 arrDoctorId.map((item, index) => {
                                     return(
                                        
                                     <div className="row doctor">
-                                        <div className="col-6 mt-5">
+                                        <div className="col-6 mt-5  m-6 c-12">
                                             <ProfileDoctor 
                                                 doctorId = {item}
                                                 isShowDescription = {true} />
                                             </div>
                                             
 
-                                        <div className="col-6 body mt-5">
+                                        <div className="col-6 body   m-6 c-12 mt-5">
                                         <div className="">
                                         <DoctorSchedule
                                             doctorIdFromParent = {item}
@@ -125,7 +126,9 @@ class DetailClinic extends Component {
                                    
                             
                                 })
-                                }        
+                                }    
+                        </div>
+                                    
                 </div>
 
                     <div className="container mt-5">

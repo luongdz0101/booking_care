@@ -79,14 +79,14 @@ class DetaiDoctor extends Component {
                        
                         <div className="grid wide">
                             <div className="row">
-                                <div className="col-2">
+                                <div className="col l-2 m-3 c-2">
                                     <div className="container__one-left"
 
                                     style={{backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`}}>
                                     
                                     </div>
                                 </div>
-                                <div className="col-7">
+                                <div className="col l-7 m-6 c-8">
                                     <div className="container__one-right">
                                     <div className="container__one-right-up">
                                         <span className='container__one-right-up__text'>
@@ -115,7 +115,7 @@ class DetaiDoctor extends Component {
                     <div className="detail-container__two">
                         <div className="grid wide">
                             <div className="row">
-                                <div className="col-8">
+                                <div className="col l-8  m-6 c-12">
                                     <div className="container__two-left">
                             
                                             <DoctorSchedule 
@@ -123,7 +123,7 @@ class DetaiDoctor extends Component {
                                             />
                                     </div>
                                 </div>  
-                                <div className="col-4">
+                                <div className="col l-4  m-6 c-12">
                                     <div className="container__two-right">
                                         <DoctorExtralnfor 
                                          doctorIdFromParent = {this.state.currentDoctorId}

@@ -1,18 +1,23 @@
 .detail-dataProfile {
-
+    display: flex;
 
     .dataProfile-left {
-        width: 100px;
-        margin: 0 auto;
-        height: 100px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        cursor: pointer;
+        width: 30%;
 
+        .dataProfile-img {
+            width: 100%;
+            margin: 0 auto;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            // border-radius: 50%;
+            background-position: center center;
+        }
     }
 
     .dataProfile-right {
+        width: 70%;
+
         .dataProfile-right-up {
             .dataProfile-right-up__text {
                 font-size: 2rem;

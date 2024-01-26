@@ -60,7 +60,7 @@ let  getTopDoctorHome= (limitInput) => {
 let  getAllDoctor= () => {
     return new Promise(async (resolve, reject) => {
         try {
-            let doctors = await db.User.findAll({
+            let doctors = await db.user.findAll({
                 where: {roleID: 'R2'},           
             })
             

@@ -3,17 +3,20 @@ import db from "../models/index";
 import emailServices from "./emailServices";
 var _ = require('lodash');
 require('dotenv').config();
+const { Op } = require("sequelize")
 
 
 const MAX_NUMBERS_SCHEDULE = process.env.MAX_NUMBERS_SCHEDULE;
 
 
-let  getTopDoctorHome= (limitInput) => {
+
+let  getTopDoctorHome= () => {
     return new Promise(async (resolve, reject) => {
         try {
-            let users = await db.User.findAll({
-                limit : limitInput,
-                where: {roleID: 'R2'},
+            let doctors = await db.User.findAll({
+                where: {
+                        roleID: 'R2'                     
+                }, 
                 order: [['createdAt','DESC']],
                 attributes: {
                     exclude: ['password']
@@ -31,23 +34,14 @@ let  getTopDoctorHome= (limitInput) => {
                     }
                    
                 ],
-
-                
-               
-
-
                 raw: true,
                 nest: true
-               
+                        
             })
-
-        
-         
-          
-
+            
             resolve({
                 errCode: 0,
-                data: users
+                data: doctors
             })
             
                    
@@ -57,11 +51,38 @@ let  getTopDoctorHome= (limitInput) => {
     })
 }
 
+
 let  getAllDoctor= () => {
     return new Promise(async (resolve, reject) => {
         try {
-            let doctors = await db.user.findAll({
-                where: {roleID: 'R2'},           
+            let doctors = await db.User.findAll({
+                where: {
+                   
+                    [Op.or]: [
+                        { roleID: 'R2' },
+                        { roleID: 'R5' }
+                    ]
+                }, 
+                order: [['createdAt','DESC']],
+                attributes: {
+                    exclude: ['password']
+                },
+                include: [
+                    { model: db.Allcode, as: 'positionData', attributes: ['valueEn', 'valueVi', 'keyMap']},
+                    { model: db.Allcode, as: 'genderData', attributes: ['valueEn', 'valueVi']},{
+                        model: db.Doctor_info, 
+                        attributes: {
+                             exclude: ['id', 'doctorId']
+                        },
+                        include: [
+                            { model: db.specialty, as: 'specialtyData', attributes: ['name']},
+                        ]
+                    }
+                   
+                ],
+                raw: true,
+                nest: true
+                        
             })
             
             resolve({
@@ -457,7 +478,7 @@ let  postSendRemedy= (data) => {
                         doctorId: data.doctorId,
                         patientId: data.patientId,
                         timeType: data.timeType,
-                         statusId: 'S2'
+                        statusId: 'S2'
                        
                     },
                     raw: false

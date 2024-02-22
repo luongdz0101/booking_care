@@ -159,7 +159,55 @@ let sendAttachment = async(dataSend) => {
         ]
     });
 }
+let sendReply = async(dataSend) => {
+    let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+        
+        user: process.env.EMAIL_APP,
+        pass: process.env.EMAIL_APP_PASSWORD,
+        },
+    });
+
+    let info = await transporter.sendMail({
+
+        from: '"BookingCare.com 🏥" <admin@gmail.com>', 
+        to: dataSend.email, 
+        subject: "Kết quả khám bệnh ✔", 
+        text: "Hello world?", 
+        html: getBodyHtmlEmailReply(dataSend),
+    });
+}
+
+let getBodyHtmlEmailReply = (dataSend) => {
+    let result = '';
+   
+        result = `
+        <h3> Xin chào ${dataSend.fullName} </h3>
+        <p>Tôi là bác sĩ cộng đồng (Booking Care) </p>
+
+        <p>Tôi hy vọng bạn đang có một ngày tốt lành. Cảm ơn bạn đã chia sẻ câu hỏi của mình về tình trạng sức khỏe. </p>
+        <p>Câu hỏi của bạn là: </p>
+        <p>${dataSend.question} </p>
+        <p>Trả lời: </p>
+        <p>${dataSend.reply} </p>
+        <p>Hãy Hãy chắc chắn rằng tôi luôn ở đây để hỗ trợ bạn trong hành trình chăm sóc sức khỏe của mình. Nếu có bất kỳ câu hỏi hoặc cần thêm thông tin, đừng ngần ngại liên hệ với tôi. Chúng ta có thể sắp xếp cuộc hẹn hoặc thảo luận thêm chi tiết qua email nếu bạn muốn.</p>    
+        <div>
+            Xin chân thành cảm ơn và chúc bạn một ngày tốt lành!
+        </div>
+        <div>
+            <p>Trân trọng, </p>
+            <p>Bác sĩ cộng đồng (Booking Care </p>
+        </div>
+
+    `;
+   return result;
+
+}
 module.exports = {
     sendSimpleEmail: sendSimpleEmail,
-    sendAttachment:sendAttachment
+    sendAttachment:sendAttachment,
+    sendReply: sendReply
 }

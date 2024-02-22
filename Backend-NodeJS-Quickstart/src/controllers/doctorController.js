@@ -3,7 +3,7 @@ import doctorServices from "../services/doctorServices"
 let getTopDoctorHome = async(req,res) => {
  
     try {
-        let response = await doctorServices.getAllDoctor(+limit);
+        let response = await doctorServices.getTopDoctorHome(); 
         return res.status(200).json(response);
     } catch (error) {
        
@@ -17,7 +17,7 @@ let getTopDoctorHome = async(req,res) => {
 let getAllDoctor = async(req,res) => {
   
     try {
-        let doctors = await doctorServices.getTopDoctorHome();
+        let doctors = await doctorServices.getAllDoctor();
        
         return res.status(200).json(doctors);
     } catch (error) {

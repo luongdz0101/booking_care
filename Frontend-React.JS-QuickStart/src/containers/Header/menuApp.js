@@ -58,13 +58,14 @@ export const adminMenu = [
             
         ]
     },
-      // quan ly cam nang
+      // quan ly hoi dap
       { 
         name: 'menu.admin.asked-answered',
         menus: [
             {
                 name: 'menu.admin.manage-asked-answered',link: '/system/manage-asked-answered'
             },
+            
             
         ]
     },
@@ -86,6 +87,39 @@ export const doctorMenu = [
                 name: 'menu.doctor.manage-patient',link: '/doctor/manage-patient'
      
             }
+        
+        ],
+       
+        
+    }
+    
+  
+];
+
+export const communityDoctorMenu = [
+    {
+        name: 'menu.admin.manage-user',
+
+        menus: [
+            {     
+            name: 'menu.doctor.manage-schedule',link: '/doctor/manage-schedule'
+            }
+
+        ],
+       
+        
+    }
+    
+  
+];
+
+
+export const onlineDoctorMenu = [
+    {
+        name: 'menu.admin.manage-user',
+
+        menus: [
+           
         
         ],
        

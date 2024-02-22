@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions'
 import './ManageDoctor.scss'
@@ -9,7 +9,7 @@ import 'react-markdown-editor-lite/lib/index.css';
 import { CRUD_ACTIONS, languages } from '../../../utils/constant'
 import Select from 'react-select';
 import {getDetailDoctor} from '../../../services/userServices'
-import { times } from 'lodash';
+
 
 
 
@@ -311,7 +311,7 @@ class ManageDoctor extends Component {
        
         return (
             <div className='manage-doctor__container'>
-               <div className="manage-doctor__title">Tạo thêm thông tin bác sĩ</div>
+               <div className="manage-doctor__title"> Thông tin bác sĩ</div>
                <div className="container">
                     <div className="row">
                         <div className="col-6 mt-4">

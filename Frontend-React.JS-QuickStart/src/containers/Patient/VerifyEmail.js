@@ -70,7 +70,7 @@ class VerifyEmail extends Component {
             <React.Fragment>
                
                     <HomeHeader isShowBanner = {false}/>
-                    <div className="mt">
+                    <div className="ve">
                     
                 {statusVerify == false ? 
                             <div className="">

@@ -262,6 +262,7 @@ class BookingModal extends Component {
                                         <input type="text"  className='form-control'
                                             value={this.state.fullName}
                                             onChange={(event) =>this.handleOnChangeInput(event, 'fullName')}
+                                            placeholder='Nguyễn Văn A'
                                         
                                         />
                                     </div>
@@ -270,20 +271,25 @@ class BookingModal extends Component {
                                         <input type="text"  className='form-control'
                                             value={this.state.phoneNumber}
                                             onChange={(event) =>this.handleOnChangeInput(event, 'phoneNumber')}
+                                            placeholder='0705500...'
                                         />
                                     </div>
                                     <div className="col-6 form-group">
                                         <label htmlFor="">Địa chỉ email</label>
                                         <input type="text"  className='form-control'
-                                        value={this.state.email}
-                                        onChange={(event) =>this.handleOnChangeInput(event, 'email')}
+                                            value={this.state.email}
+                                            onChange={(event) =>this.handleOnChangeInput(event, 'email')}
+                                            placeholder='email@gmail.com'
+
                                         />
                                     </div>
                                     <div className="col-6 form-group">
                                         <label htmlFor="">Địa liên hệ</label>
                                         <input type="text"  className='form-control'
-                                        value={this.state.address}
-                                        onChange={(event) =>this.handleOnChangeInput(event, 'address')}
+                                            value={this.state.address}
+                                            onChange={(event) =>this.handleOnChangeInput(event, 'address')}
+                                            placeholder='Hà Nội'
+
                                         />
                                     </div>
                                     <div className="col-12 form-group">
@@ -292,6 +298,7 @@ class BookingModal extends Component {
                         
                                             onChange={(event) => this.handleOnChangeInput(event, 'reason')}
                                             value={this.state.reason}
+                                            placeholder='Tội bị đau...'
                                         >
                                             
                                         </textarea>
@@ -302,6 +309,7 @@ class BookingModal extends Component {
                                             onChange={this.handleOnChangeDatePicket}
                                             className= 'form-control'
                                             value={this.state.birthday}
+                                            placeholder='Ấn chọn ngày sinh'
                                         
                                           
                           
@@ -312,6 +320,7 @@ class BookingModal extends Component {
                                         <select className="form-control"
                                  
                                             onChange={(event) => {this.handleOnChangeInput(event, 'gender')}}
+                                          
                                             value={this.state.gender}
                                             >
 

@@ -28,6 +28,7 @@ import DetailClinic from './Patient/MedicalFacilities/DetailClinic.js';
 import VerifyEmail from './Patient/VerifyEmail.js'
 import HeaderSpecialty from './Patient/Specialty/HeaderSpecialty.js';
 import DetailsAskAnswer from './Patient/Details/DetailsAskAnswer.js';
+import PatientAsked from './Patient/Clinic/PatientAsked.js';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -64,6 +65,7 @@ class App extends Component {
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                     <Route path={'/doctor'} component={userIsAuthenticated(Doctor)} />
+                                    
                                     <Route path={path.HOMEPAGE} component={HomePage} />
                                     
                                     <Route path={path.DETAIL_DOCTOR} component={DetaiDoctor}/> 
@@ -75,6 +77,7 @@ class App extends Component {
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic}/> 
                                     <Route path={path.HEADER_CLINIC} component={HeaderClinic}/> 
                                     <Route path={path.HEADER_SPECIALTY} component={HeaderSpecialty}/> 
+                                    <Route path = {path.PATIENT_ASKED} component= {PatientAsked} />
 
                                     <Route path={path.HEADER_DOCTOR} component={HeaderDoctor}/> 
 

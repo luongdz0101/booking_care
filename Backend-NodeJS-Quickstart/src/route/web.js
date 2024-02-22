@@ -65,12 +65,17 @@ let initWebRoutes = (app) => {
 
     router.post('/api/create-new-question', questionController.createNewQuestion);
     router.get('/api/get-question', questionController.getQuestion);
-
     router.post('/api/search', questionController.search);
     router.get('/api/get-question-by-id', questionController.getQuestionById);
-
-
     router.get('/api/doctor-info', questionController.getDoctorInfo);
+    router.get('/api/get-reply', questionController.getReply);
+    router.post('/api/send-question', questionController.sendQuestion);
+
+    // router.post('/api/create-new-patient-question', questionController.createNewPatientQuestion);
+
+
+
+
 
 
     return app.use("/", router);

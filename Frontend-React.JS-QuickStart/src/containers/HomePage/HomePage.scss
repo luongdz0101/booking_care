@@ -80,6 +80,16 @@
                 background-repeat: no-repeat
             }
 
+            &.img_answered-1 {
+                background: url(../../assets/answeredDoctor/camnanghoidap.jpeg) center center no-repeat;
+                height: 240px;
+                margin: 0 auto;
+                width: 100%;
+                border-radius: 2rem;
+                background-size: contain;
+            }
+
+
             &.img_answered {
                 background: url(../../assets/answeredDoctor/hoidapcongdong.jpeg) center center no-repeat;
                 height: 240px;
@@ -142,6 +152,7 @@
 
 
 .slick-prev {
+    display: block !important;
     background: rgb(181, 231, 237) !important;
     left: -16px !important;
     top: 45% !important;
@@ -153,6 +164,7 @@
 }
 
 .slick-next {
+    display: block !important;
     right: -16px !important;
     top: 45% !important;
     z-index: 1000 !important;

@@ -17,11 +17,7 @@ class OutstandingDoctor extends Component {
     constructor(props){
         super(props);
         this.state = {
-           
             arrDoctors: [],
-         
-      
-          
         }
     }
   
@@ -50,11 +46,16 @@ class OutstandingDoctor extends Component {
         this.props.history.push(`/header-doctor`)
     }
 
+
+    
+    
+   
     render() {
        
 
         
         let arrDoctor = this.state.arrDoctors;
+        // console.log()
         
         
         let {language} = this.props;

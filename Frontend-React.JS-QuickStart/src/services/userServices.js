@@ -31,8 +31,8 @@ const getAllCodeService = (inputType) => {
 }
 
 
-const getTopDoctorHomeService = (limit) => {
-    return axios.get(`/api/get-all-doctor?limit=${limit}`);
+const getTopDoctorHomeService = () => {
+    return axios.get(`/api/top-doctor-home`);
 }
 
 const getAllDoctorService = () => {
@@ -137,8 +137,14 @@ const search = (data) => {
     return axios.post(`/api/search?searchTerm=${data.search}`)
 }
 
+const sendQuestion = (data) => {
+    return axios.post(`/api/send-question`, data);
+}
 
 
+const getReply = (data) => {
+    return axios.get(`/api/get-reply`);
+}
 
 
 
@@ -178,5 +184,7 @@ export {
     saveInfoSpecialty,
     handleDeleteSpecialty,
     deleteMedicalFacilities,
-    createNewQuestion
+    createNewQuestion,
+    sendQuestion,
+    getReply
 };

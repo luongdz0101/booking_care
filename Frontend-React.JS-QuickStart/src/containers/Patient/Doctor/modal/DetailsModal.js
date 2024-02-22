@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import { getQuestionById } from '../../../../services/userServices';
 import {  Modal, ModalHeader, ModalBody } from 'reactstrap';
-
+import './DetailsModal.scss'
 
 
 const DetailsModal = (props) => {
@@ -16,9 +16,11 @@ const DetailsModal = (props) => {
         let res = await getQuestionById({
             id: questionId
         });
+
+  
         let data = res.data;
         if(res && res.errCode === 0){
-            setDataModal(data.descriptionHtml);
+            setDataModal(data);
         }
     }, [])
     return(
@@ -32,11 +34,17 @@ const DetailsModal = (props) => {
             >
                 <ModalHeader toggle={closeModal}>{title}</ModalHeader>
                 <ModalBody>
-                  {dataModal && 
-                  
-                  
-                    <div dangerouslySetInnerHTML={{__html: dataModal }}></div>
-                  }
+                  <div className="body-QA">
+                        <div className="title">Câu hỏi: </div>
+                        <div className="nd">
+                            {dataModal.question}
+                        </div>
+
+                        <div className="title">Trả lời: </div>
+                        <div className="nd">
+                            {dataModal.reply}
+                        </div>
+                  </div>
                 </ModalBody>
                 
             </Modal>

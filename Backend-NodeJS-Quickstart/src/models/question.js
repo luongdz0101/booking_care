@@ -14,10 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
  question.init({
-    descriptionMarkdown: DataTypes.TEXT,
-    descriptionHtml: DataTypes.TEXT,
+    email: DataTypes.STRING,
+    fullName: DataTypes.STRING, 
+    address: DataTypes.STRING,
+    phoneNumber: DataTypes.INTEGER,
+    question: DataTypes.TEXT,
     image: DataTypes.STRING,
-    name: DataTypes.STRING,
+    reply: DataTypes.TEXT,
     
   }, {
     sequelize,

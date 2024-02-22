@@ -23,8 +23,9 @@ class ManagePatient extends Component {
             isOpenRemedy: false,
             dataModal: {},
 
-            isShowLoading: false
-
+            isShowLoading: false,
+            isImg: true,
+            isReply: false
         }
     }
  
@@ -100,8 +101,6 @@ class ManagePatient extends Component {
 
     sendRemedy =  async (dataChileModal) => {
 
-       
-        
         this.setState({
             isShowLoading: true
         })
@@ -155,7 +154,7 @@ class ManagePatient extends Component {
             <React.Fragment>
                <div className="manage-schedule__container">
                     <div className="m-s-title">
-                        <FormattedMessage id = "manage-patient.title"/>
+                        Thông báo kết quả khám
                     </div>
 
                     <div className="container">
@@ -248,6 +247,8 @@ class ManagePatient extends Component {
                     dataModal = {dataModal}
                     closeModal= {this.closeModal}
                     sendRemedy = {this.sendRemedy}
+                    isImg={this.state.isImg}
+                    isReply={this.state.isReply}
                 />
             }
 

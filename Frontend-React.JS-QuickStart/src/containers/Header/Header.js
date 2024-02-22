@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import * as actions from "../../store/actions";
 import Navigator from '../../components/Navigator';
-import { adminMenu, doctorMenu } from './menuApp';
+import { adminMenu, doctorMenu, communityDoctorMenu, onlineDoctorMenu } from './menuApp';
 import './Header.scss';
 import { FormattedMessage } from 'react-intl';
 import { USER_ROLE, languages } from '../../utils/constant';
@@ -35,7 +35,13 @@ class Header extends Component {
             }
             if(role === USER_ROLE.DOCTOR){
                 menu = doctorMenu;
-            
+            }
+
+            if(role === USER_ROLE.CommunityDoctor){
+                menu = communityDoctorMenu;
+            }
+            if(role === USER_ROLE.OnlineDoctor){
+                menu = onlineDoctorMenu;
             }
             
         }

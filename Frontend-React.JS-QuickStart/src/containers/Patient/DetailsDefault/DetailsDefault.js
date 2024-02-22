@@ -9,7 +9,7 @@ import DetailsModal from '../Doctor/modal/DetailsModal';
 
 const DetailsDefault  = (props) => {
 
-    const {title, nameLink, setSizeImg, modal, arrDetails} = props  
+    const {title, nameLink, setSizeImg, modal, arrDetails, setQuestion} = props  
     const[isOpen, setIsOpen] = useState(false)
 
 
@@ -95,7 +95,11 @@ const DetailsDefault  = (props) => {
                                                         <div className="detail__body-text">
                                                     
                                                         <div className="detail__text-up">
-                                                            {item.name}
+
+                                                            {
+                                                                setQuestion === true ? item.question : item.name
+                                                            }
+                                                          
                                                         </div>
                                                     
                                                         {/* <div className="detail-clinic__dow">

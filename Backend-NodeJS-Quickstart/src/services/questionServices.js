@@ -1,50 +1,77 @@
 
 import db from "../models/index";
 const { Op } = require("sequelize")
+import emailServices from "./emailServices";
 
 
 let  createNewQuestion = async(data) => {
     return new Promise(async (resolve, reject) => {
+        if(!data.email ||  !data.fullName || !data.address ||  !data.phoneNumber ||  !data.question ){
+            resolve({
+                errCode: 1,
+                errMessage: 'Missing Parameter'
+            })
+        }else{
+        
+            await db.question.create({
+                fullName: data.fullName,
+                email: data.email,
+                address: data.address,
+                phoneNumber: data.phoneNumber,
+                question: data.question   ,
+                image: data.image                
+            })
+
+            resolve({
+                errCode: 0,
+                errMessage: 'Post success'
+            })
+        }
+    })
+}
+
+let  getQuestion = () => {
+    return new Promise(async (resolve, reject) => {
         try {
-            if(!data.name ||  !data.image || !data.descriptionHtml ||  !data.descriptionMarkdown ){
-                resolve({
-                    errCode: 1,
-                    errMessage: 'Missing Parameter'
-                })
-            }else{
-            
-                await db.question.create({
-                    name: data.name,
-                    image: data.image,
-                    descriptionHtml: data.descriptionHtml,
-                    descriptionMarkdown: data.descriptionMarkdown
-                   
-                })
-
-
-                resolve({
-                    errCode: 0,
-                    errMessage: 'Post success'
-                })
-
+            let data = await db.question.findAll({
+                where: {
+                    reply: null
+                }
+            })
+    
+            if(data && data.length > 0){
+                    data.map(item => {
+                    
+                        item.image =  new Buffer(item.image, 'base64').toString('binary')
+                        return item;
+                    })
             }
-           
-              
-           
+            if(!data) data = {}
+
+            resolve({
+                errMessage: 'ok',
+                errCode: 0,
+                data
+            })
+            
+                   
         } catch (error) {   
             reject(error)
         }
     })
 }
 
-let  getQuestion= () => {
+let  getReply = () => {
     return new Promise(async (resolve, reject) => {
         try {
             let data = await db.question.findAll({
-              
+                where: {
+                    reply: {
+                        [Op.not]: null,
+                    }
+                }
             })
-        
-
+    
             if(data && data.length > 0){
                     data.map(item => {
                     
@@ -150,8 +177,8 @@ let  getQuestionById = (id) => {
                     let data = await db.question.findOne({
                         where: {
                             id: id
+
                         },
-                        attributes: ['descriptionHtml', 'descriptionMarkdown', 'name', 'image']
                     })
 
                     if(data && data.image){
@@ -173,8 +200,6 @@ let  getQuestionById = (id) => {
         }
     })
 }
-
-
 
 let  getDoctorInfo= () => {
     return new Promise(async (resolve, reject) => {
@@ -213,10 +238,63 @@ let  getDoctorInfo= () => {
     })
 }
 
+let  sendQuestion = (data) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+            if(!data.email ){
+                resolve({
+                    errCode: 1,
+                    errMessage: "missing "
+                })
+            }else{
+
+                let sendReply = await db.question.findOne({
+                    where: {
+                        email: data.email,
+                        fullName: data.fullName,
+                        
+                       
+                    },
+                    raw: false
+                })
+
+                
+                console.log(sendReply);
+                
+                if(sendReply){
+                    sendReply.reply = data.reply
+                    sendReply.image = data.image
+                    await sendReply.save()
+                }
+                
+            }
+              
+            // await emailServices.sendReply(data)
+            
+
+            resolve({
+                errCode: 0,
+                errMessage: 'Ok',
+                
+            })
+            
+                   
+        } catch (error) {   
+            reject(error)
+        }
+    })
+}
+
+
+
 module.exports = {
     createNewQuestion: createNewQuestion,
     getQuestion: getQuestion,
     search: search,
     getQuestionById: getQuestionById,
-    getDoctorInfo: getDoctorInfo
+    getDoctorInfo: getDoctorInfo,
+    sendQuestion: sendQuestion,
+    getReply: getReply
+    
 }

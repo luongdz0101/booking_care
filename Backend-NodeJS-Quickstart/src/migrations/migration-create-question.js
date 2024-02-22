@@ -10,17 +10,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      email: {
         type: Sequelize.STRING
       },
-      descriptionHtml: {
+      fullName: {
+        type: Sequelize.STRING
+      },
+      address: {
+        type: Sequelize.STRING
+      },
+      phoneNumber: {
+        type: Sequelize.INTEGER
+      },
+      question: {
         type: Sequelize.TEXT
       },
       image: {
         type: Sequelize.BLOB('long'),
       },
-      descriptionMarkdown: {
-        type: Sequelize.STRING
+      reply: {
+        type: Sequelize.TEXT
       },
 
       

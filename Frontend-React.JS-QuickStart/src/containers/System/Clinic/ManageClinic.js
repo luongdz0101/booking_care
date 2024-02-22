@@ -9,18 +9,14 @@ import Select from 'react-select';
 import 'react-markdown-editor-lite/lib/index.css';
 import { getMedicalFacilitiesById, getAllMedicalFacilities, saveInfoMedicalFacilities,deleteMedicalFacilities } from '../../../services/userServices';
 import { CRUD_ACTIONS } from '../../../utils/constant';
-
 import { toast } from 'react-toastify';
+
 const mdParser = new MarkdownIt();
 
 
 
 
-class ManageClinic extends Component {
-
-
-  
-        
+class ManageClinic extends Component {        
     constructor(props){
         super(props);
         this.state = {
@@ -78,9 +74,7 @@ class ManageClinic extends Component {
         
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-      
-    }
+   
  
     buildDataInputSelect = (inputData) => {
         let result = [];

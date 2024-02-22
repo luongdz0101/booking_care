@@ -13,14 +13,7 @@ class  ForLife extends Component {
     
 
     render() {
-        let settings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            
-          };
+       
 
         return (
            < React.Fragment>
@@ -41,7 +34,7 @@ class  ForLife extends Component {
                     
                 </div>
                  <div className="grid wide ">
-                 <Slider {...settings}>
+                 <Slider {...this.props.settings}>
                             <div className="specialty-content__body">
                                 <div className='specialty-content for-life-content'> 
                                     <div className="specialty-content__img img_for-life"></div>

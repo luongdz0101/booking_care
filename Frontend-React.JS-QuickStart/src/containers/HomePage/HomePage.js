@@ -124,7 +124,7 @@ class HomePage extends Component {
               
                 <VideoDoctor />
 
-                {/* <ForLife /> */}
+                <ForLife  settings= {settings} />
 
                 <HomeFooter/>
            </div>

@@ -16,38 +16,54 @@ class AnsweredDoctor extends Component {
         this.props.history.push(`/doctor_ask-answer`)
     }
 
+    handleOnClickPatientAsked = () => {
+        this.props.history.push(`/patient_asked`)
+    }
     render() {
         
     
         return (
             < React.Fragment>
-                <div className="section-specialty" onClick={() => this.handleDetailerAsKAnswer()}>
+                <div className="section-specialty" >
                     <div className="specialty-content ">
                     <div className="grid wide ">
-                        <div className="row">
+                        <div className="row center">
                             
-                            <div className="col l-8 m-8 c-6 header__title--body">
+                            <div className="col-8 header__title--body">
                                     <div className="specialty-header__title">Bác sĩ hỏi đáp</div>
                             </div>
-                            <div className="col l-4 c-6 header__button--body">
-                                <button type="button" className="btn btn-info specialty-header__button"><FormattedMessage id ="home-page.see-more"/></button>
+                            <div className="col-4 header__button--body">
+                                <button type="button" className="btn btn-info specialty-header__button"
+                                onClick={() => this.handleOnClickDoctor()}
+                                
+                                
+                                ><FormattedMessage id ="home-page.see-more"/></button>
                             </div>
-
-                            <div className="col l-4 m-4 c-12 mt-4">
-                                <div className="specialty-content__body">
-                                    <div className='specialty-content'> 
-                                        <div className="specialty-content__img img_answered"></div>
-                                        
-                                        <span className='specialty-content__text answered-text'>Cảm nang hỏi đáp</span>
-                                    </div>
-                                </div>
-                            </div>
-
                         
                         </div>
                     </div>
 
                     </div>
+
+                    <div className="grid wide">
+                                <Slider {...this.props.settings}>
+                           
+                                    <div className="specialty-content__body " onClick={() => this.handleOnClickPatientAsked()}>
+                                        <div className='specialty-content'> 
+                                            <div className="specialty-content__img img_answered-1"></div>
+                                            
+                                            <span className='specialty-content__text answered-text'>Bệnh nhân đặt câu hỏi</span>
+                                        </div>
+                                    </div>
+                                    <div className="specialty-content__body " onClick={() => this.handleDetailerAsKAnswer()}>
+                                        <div className='specialty-content'> 
+                                            <div className="specialty-content__img img_answered"></div>
+                                            
+                                            <span className='specialty-content__text answered-text'>Cảm nang hỏi đáp</span>
+                                        </div>
+                                    </div>
+                                </Slider>
+                            </div>
                 </div>
             </React.Fragment>
         );

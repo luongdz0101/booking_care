@@ -13,6 +13,8 @@ export const path = {
     ASK_ANSWER: '/doctor_ask-answer',
     HEADER_DOCTOR: '/header-doctor',
 
+    PATIENT_ASKED: '/patient_asked',
+
 
     VERIFY_EMAIL_BOOKING: '/verify-booking'
 
@@ -42,6 +44,7 @@ export const YesNoObj = {
 export const USER_ROLE = {
     ADMIN: 'R1',
     DOCTOR: 'R2',
-    PATIENT: 'R3'
-
+    PATIENT: 'R3',
+    OnlineDoctor: 'R5',
+    CommunityDoctor: 'R4',
 }

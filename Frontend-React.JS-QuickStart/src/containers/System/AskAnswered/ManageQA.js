@@ -1,52 +1,57 @@
 import React, {useState} from 'react';
-import { createNewQuestion } from '../../../services/userServices';
 import { toast } from 'react-toastify';
-import ManageDefault from '../Admin/ManageDefault';
 import InputForm from '../../../components/InputFrom/InputForm';
+import './ManageQA.scss'
+import TableQA from './TableQA';
+import {  CommonUtils } from '../../../utils';
+import MarkdownIt from 'markdown-it';
+import MdEditor from 'react-markdown-editor-lite';
+import Lightbox from 'react-image-lightbox';
+import 'react-markdown-editor-lite/lib/index.css';
+const mdParser = new MarkdownIt();
 
 
 const ManageQA = () => {
 
+    
 
-        
-        const getDataQuestion = async(data) => {
 
-                let res = await createNewQuestion ({
-                    name: data.name,
-                    image: data.image,
-                    descriptionHtml: data.descriptionHtml,
-                    descriptionMarkdown: data.descriptionMarkdown
-                })
+   
 
-                if(res && res.errCode === 0){
-                    toast.success('Lưu thông tin chuyên khoa thành công');
-               
+   
 
-                }else{
-                    toast.error('Lưu thông tin chuyên khoa thất bại')
-                }
-        
-        }
-        
 
-     
+
+    
+
+       
+
+
+  
+
+  
+
+    
+ 
+
+
+    
         return (
 
          
            
             
             <React.Fragment>
-
-         
-                <ManageDefault 
-                    getDataQuestion = {getDataQuestion}
-                    title = 'Thêm mới hỏi đáp'
-                    name = 'Tên câu hỏi'
-                    placeholder = 'VD: Tôi hay bõ bữa....'
-                    isOpenInput = {false}
-                />
+                    <div className="m-s-title">
+                        Quản lý hỏi đáp
+                    </div>
+                <div className="container mt-5">
+                    <TableQA />
+                </div>
 
                
+
+            
              
     
             </React.Fragment>

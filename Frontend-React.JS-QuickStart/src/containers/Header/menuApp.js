@@ -98,14 +98,14 @@ export const doctorMenu = [
 
 export const communityDoctorMenu = [
     {
-        name: 'menu.admin.manage-user',
-
+        name: 'menu.admin.asked-answered',
         menus: [
-            {     
-            name: 'menu.doctor.manage-schedule',link: '/doctor/manage-schedule'
-            }
-
-        ],
+            {
+                name: 'menu.admin.manage-asked-answered',link: '/system/manage-asked-answered'
+            },
+            
+            
+        ]
        
         
     }
